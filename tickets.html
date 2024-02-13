@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>Tickets - Web Demostración</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,300;0,500;0,700;1,900&display=swap" rel="stylesheet">
+    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon" />
+    <style>
+
+        .forma-envase {
+            display: flex;
+            flex-wrap: wrap; /* Permitir que los elementos pasen a la siguiente línea */
+            justify-content: space-between;
+            max-width: 95%;
+            margin: 20px auto;
+            margin-bottom: 5px;
+        }
+
+        .forma-columna {
+            width: 49%;
+            margin-bottom: 10px; /* Añade algo de espacio entre columnas. */
+        }
+
+        .forma-grupo {
+            margin-bottom: 15px;
+        }
+
+        .forma-envase label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .forma-envase input,
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .botón-central {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Consulta de medios para pantallas más pequeñas */
+        @media (max-width: 600px) {
+            .forma-columna {
+                width: 100%; /* Establezce el ancho al 100% para el diseño de una sola columna */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="boleto-envase">
+        <section class="encabezado-contenedor">
+            <div class="contenido">
+                <div class="logotipo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <div class="nav-enlaces">
+                    <a href="info.html">Información</a>
+                    <a href="calendar.html" >Calendario</a>
+                    <a href="tickets.html" class="nav-actual">Entradas</a>
+                </div>
+            </div>
+        </section>
+        <section class="cuerpo-contenedor-boleto">
+            <div class="contenido">
+                <h1>Compra tus entradas</h1>
+                <p class="descripción">
+                    Ser parte del Amped Festival es una experiencia que no querrás perderte. Ya sea que 
+desees estar en primera fila o disfrutar del ambiente desde un espacio VIP, tenemos 
+diferentes tipos de entradas para satisfacer tus necesidades. Completa el formulario a 
+continuación para asegurarte de estar presente en este evento musical inigualable
+                </p>
+
+                <form action="#" method="post">
+
+                    <fieldset>
+                        <legend>Información personal</legend>
+                        <div class="forma-envase">
+                            <div class="forma-columna">
+                                <div class="forma-grupo">
+                                    <label for="Nombre">Nombre: <span>*</span></label>
+                                    <input type="text" id="Nombre" name="Nombre" required placeholder="Nombre" maxlength="64">
+                                </div>
+                
+                                <div class="forma-grupo">
+                                    <label for="email">Correo electrónico: <span>*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="Email">
+                                </div>
+                                <div class="forma-grupo">
+                                    <label for="dob">Fecha de nacimiento: <span>*</span></label>
+                                    <input type="date" id="dob" name="dob" required>
+                                </div>
+                            </div>
+                
+                            <div class="forma-columna">
+                                <div class="forma-grupo">
+                                    <label for="apellidos">Apellidos: <span>*</span></label>
+                                    <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos" maxlength="64">
+                                </div>
+                                <div class="forma-grupo">
+                                    <label for="telefono">Teléfono:</label>
+                                    <input type="text" id="telefono" name="telefono" placeholder="Teléfono">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                
+                    <fieldset>
+                        <legend>Tipo de Entrada</legend>
+                
+                        <div class="forma-envase">
+                            <p>Elige el tipo de entrada que prefieres para tu experiencia en el Amped Festival. Cada opción ha sido diseñada para proporcionarte el mejor acceso y comodidades durante el evento.</p>
+                            <div class="forma-columna" style="width: 100%;">
+                                <div class="forma-grupo">
+                                    <label for="tipo-entrada">Selecciona tu entrada:</label>
+                                    <select id="tipo-entrada" name="tipo-entrada">
+                                        <option value="Entrada General - 50€">Entrada General - 50€</option>
+                                        <option value="Entrada VIP - 150€ (incluye acceso backstage y zona preferencial)">Entrada VIP - 150€ (incluye acceso backstage y zona preferencial)</option>
+                                        <option value="Pase de dos Días - 120€">Pase de dos Días - 120€</option>
+                                    </select>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </fieldset>
+                
+                    <fieldset>
+                        <legend>Método de pago</legend>
+                        <div class="forma-envase">
+                
+                            <div class="forma-columna">
+                                <div class="forma-grupo">
+                                    <input style="width: 4%;" type="radio" id="paypal" name="paypal" value="paypal">
+                                    <label for="paypal" style="display: inline">Paypal</label><br>
+                                    <input style="width: 4%;" type="radio" id="tarjeta" name="tarjeta" value="Tarjeta de crédito">
+                                    <label for="tarjeta" style="display: inline;">Tarjeta de crédito</label><br>
+                                    <input style="width: 4%;" type="radio" id="bizum" name="bizum" value="bizum">
+                                    <label for="bizum" style="display: inline;">Bizum</label>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </fieldset>
+                
+                    <fieldset>
+                        <legend>Información tarjeta:</legend>
+                        <div class="forma-envase">
+                
+                            <div class="forma-columna" style="width: 55%;">
+                                <div class="forma-grupo">
+                                    <label for="numero-tarjeta">Número de tarjeta de crédito/débito:</label>
+                                    <input type="number" id="numero-tarjeta" name="numero-tarjeta" placeholder="1234123412341234"
+                                        pattern="\d{16}" title="El número de tarjeta de crédito debe tener exactamente 16 dígitos." required>
+                                </div>
+                            </div>
+                            <div class="forma-columna" style="width: 20%;">
+                                <div class="forma-grupo">
+                                    <label for="fecha-expiracion">Fecha de expiración: </label>
+                                    <input type="text" id="fecha-expiracion" name="fecha-expiracion">
+                                </div>
+                            </div>
+                            <div class="forma-columna" style="width: 20%;">
+                                <div class="forma-grupo">
+                                    <label for="cvc">CVC: </label>
+                                    <input type="number" id="cvc" name="cvc" placeholder="123" pattern="\d{3}"
+                                        title="El CVC debe tener exactamente 3 dígitos." required>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Dirección de envío:</legend>
+                    <div class="forma-envase">
+                
+                        <div class="forma-columna" style="width: 100%;">
+                            <div class="forma-grupo">
+                                <label for="direccion">Dirección: <span>*</span></label>
+                                <input type="text" id="direccion" name="direccion" required placeholder="Dirección">
+                            </div>
+                        </div>
+                        <div class="forma-columna" style="width: 32%;">
+                            <div class="forma-grupo">
+                                <label for="poblacion">Población: <span>*</span></label>
+                                <input type="text" id="poblacion" name="poblacion" required placeholder="Población">
+                            </div>
+                        </div>
+                        <div class="forma-columna" style="width: 32%;">
+                            <div class="forma-grupo">
+                                <label for="codigo-postal">Código postal: <span>*</span></label>
+                                <input type="number" id="codigo-postal" name="codigo-postal" required placeholder="C. Postal">
+                            </div>
+                        </div>
+                        <div class="forma-columna" style="width: 32%;">
+                            <div class="forma-grupo">
+                                <label for="pais">País: </label>
+                                <input type="text" id="pais" name="pais" placeholder="País">
+                            </div>
+                        </div>
+                
+                    </div>
+                
+                </div>
+                </fieldset>
+                
+                <label for="comentario">Comentarios o peticiones especiales</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="5" style="width: 100%; border-radius: 5px; margin-top: 5px;"></textarea>
+                <br><br>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">He leído y acepto los <a href="#" style="text-decoration: underline;">términos y condiciones</a> y la <a style="text-decoration: underline;" href="#">política de privacidad</a> <span style="color: red;">*</span></label>
+                
+                
+                
+                <br><br>
+                <div class="botón-central entregar-btn">
+                    <button type="submit">Comprar Entrada</button>
+                </div>
+                </form>
+                
+
+
+            </div>
+        </section>
+        <section class="footer-main">
+            <div class="footer-main-contenido">
+                <div class="enlaces">
+                    <a href="#">Aviso legal</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Política de cookies</a>
+                </div>
+                <div class="derecho-de-autor">
+                    <p>2023 © <a style="font-size: 0.8rem; color: #a4f479; font-weight: 500;" href="https://github.com/dmlean">dmlean</a></p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+</html>
