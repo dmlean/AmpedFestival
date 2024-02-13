@@ -1,0 +1,459 @@
+:root{
+    --main: #5865F2; /* Enlaces de colores, botones y algunos bordes. Pase el cursor sobre el color de los enlaces en el pie de página */
+    --secondary: #070e58; /*Color del texto, fondo del contenedor del encabezado, fondo del pie de página, fondo del botón Enviar al pasar el cursor */
+    --third: #a4f479; /* Color para el desplazamiento de enlaces, bordes y fondo de celdas impares de la tabla */
+}
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Fira Sans', sans-serif;
+}
+a{
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--main);
+}
+a:hover{
+    color: var(--third);
+}
+body {
+    margin: 0;
+}
+h1{
+    font-size: 2.3rem;
+    text-align: center;
+    color: var(--secondary);
+}
+
+/* HEADER */
+.encabezado-contenedor{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2ch 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.384)), url("../img/amped_header.jpg");
+    background-position: 100%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+}
+.encabezado-contenedor .contenido{
+    background-color: #070e58b9;
+    padding: 20px 60px;
+    
+}
+.encabezado-contenedor .contenido .logotipo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.encabezado-contenedor .contenido .logotipo img{
+    width: 160px;
+}
+.encabezado-contenedor .nav-enlaces a{
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0px 5px;
+}
+.encabezado-contenedor .nav-enlaces .nav-actual{
+    color: var(--third);
+    border-bottom: 1px solid var(--third);
+}
+
+/* PIE PRINCIPAL */
+.footer-main{
+    background-color: var(--secondary);
+    padding: 20px 200px;
+    margin-top: 50px;
+}
+.footer-main a{
+    color: #fff;
+    margin-right: 10px;
+}
+.footer-main a:hover{
+    color: var(--third);
+}
+.footer-main .derecho-de-autor{
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 15px;
+}
+@media only screen and (max-width: 768px) {
+    .footer-main{
+        padding: 20px;
+        margin-top: 50px;
+    }
+}
+
+/* INDEX.HTML */
+
+.sección-de-héroe {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.384)), url("../img/home-hero.jpg");
+    background-position: 100%;
+    background-repeat: repeat, no-repeat;
+    background-size: auto, cover;
+}
+.hero-paragraph {
+    color: #f8f8f8;
+    
+}
+.pie-de-página-hero{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.pie-de-página-hero-contenido .enlaces a{
+    color: white;
+    font-size: 1rem;
+    margin: 0 10px;
+}
+.pie-de-página-hero-contenido .copyright{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: white;
+}
+.logo-heroe{
+    width: 380px;
+}
+.hero-heading {
+    color: #272727;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 70px;
+    line-height: 110%;
+    font-family: 'Fira Sans', sans-serif;
+}
+.hero-wrapper{
+    margin-top: 30px;
+}
+
+
+/* INFO PAGE */
+
+.cuerpo-contenedor-información{
+    max-width: 60%;
+    margin: 0 auto;
+}
+.cuerpo-contenedor-información p{
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 300;
+}
+.youtube-vdo iframe{
+    width: 100%;
+    height: 400px;
+    margin-top: 10px;
+}
+.youtube-vdo .subtítulo{
+    font-size: 0.9rem;
+}
+.lista-envase{
+    margin-top: 30px;
+}
+.lista-envase h3{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    color: var(--secondary);
+}
+.lista-envase .descripción{
+    border-left: 2px solid var(--main);
+    padding-left: 25px;
+}
+.lista-envase .descripción .negrito{
+    font-weight: bold;
+    color: var(--secondary);
+}
+@media only screen and (max-width: 768px) {
+    .cuerpo-contenedor-información{
+        max-width: 85%;
+    }
+    .youtube-vdo iframe{
+        height: 300px;
+    }
+}
+/* Página de calendario */
+.cuerpo-contenedor-calendario{
+    max-width: 60%;
+    margin: 0 auto;
+}
+.cuerpo-contenedor-calendario p{
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 300;
+}
+.cuerpo-contenedor-calendario .calendario-encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--secondary);
+}
+.cuerpo-contenedor-calendario .calendario-encabezado p{
+    font-weight: bolder;
+}
+
+/* Tabla de calendario */
+
+
+.wrap-tabla100 {
+   
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+table * {
+    position: relative;
+}
+
+table td,
+table th {
+    padding-left: 8px;
+}
+
+table thead tr {
+    height: 50px;
+    border-bottom: 1px solid var(--secondary);
+    color: var(--secondary);
+}
+table a{
+    text-decoration: underline;
+}
+
+table tbody tr {
+    height: 50px;
+}
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+table td,
+table th {
+    text-align: left;
+}
+
+table td.l,
+table th.l {
+    text-align: right;
+}
+
+table td.c,
+table th.c {
+    text-align: center;
+}
+
+table td.r,
+table th.r {
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--third);
+    color: black;
+}
+
+tbody tr {
+     
+    font-size: 0.9rem;
+    color: var(--secondary);
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+tbody tr:hover {
+    color: #555555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.columna1 {
+    width: 150px;
+    padding-left: 20px;
+}
+
+.columna2 {
+    width: 100px;
+}
+
+.columna3 {
+    width: 200px;
+}
+
+.columna4 {
+    width: 100px;
+}
+
+.columna5 {
+    width: 180px;
+}
+
+.columna6 {
+    width: 100px;
+
+}
+.columna7 {
+    width: 20px;
+    padding-right: 20px;
+
+}
+
+@media screen and (max-width: 992px) {
+    table {
+        display: block;
+    }
+    table>*,
+    table tr,
+    table td,
+    table th {
+        display: block;
+    }
+    table thead {
+        display: none;
+    }
+    table tbody tr {
+        height: auto;
+        padding: 37px 0;
+    }
+    table tbody tr td {
+        padding-left: 40% !important;
+        margin-bottom: 24px;
+    }
+    table tbody tr td:last-child {
+        margin-bottom: 0;
+    }
+    table tbody tr td:before {
+         
+        font-size: 14px;
+        color: #999999;
+        line-height: 1.2;
+        font-weight: unset;
+        position: absolute;
+        width: 40%;
+        left: 30px;
+        top: 0;
+    }
+    table tbody tr td:nth-child(1):before {
+        content: "Date";
+    }
+    table tbody tr td:nth-child(2):before {
+        content: "Order ID";
+    }
+    table tbody tr td:nth-child(3):before {
+        content: "Name";
+    }
+    table tbody tr td:nth-child(4):before {
+        content: "Price";
+    }
+    table tbody tr td:nth-child(5):before {
+        content: "Quantity";
+    }
+    table tbody tr td:nth-child(6):before {
+        content: "Total";
+    }
+    .columna4,
+    .columna5,
+    .columna6 {
+        text-align: left;
+    }
+    .columna4,
+    .columna5,
+    .columna6,
+    .columna1,
+    .columna2,
+    .columna3 {
+        width: 100%;
+    }
+    tbody tr {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-tabla100 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.tabla100 .calendario-subtítulo{
+    font-size: 0.7rem;
+    border-bottom: 1px solid var(--secondary);
+    padding-bottom: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .cuerpo-contenedor-calendario{
+        max-width: 85%;
+    }
+}
+
+
+/* Página de entradas */
+
+.cuerpo-contenedor-boleto{
+    max-width: 60%;
+    margin: 0 auto;
+}
+.cuerpo-contenedor-boleto .descripción{
+    color: var(--secondary);
+    font-size: 1rem;
+    font-weight: 300;
+}
+fieldset{
+    border-radius: 5px;
+    background-color: #DDE1FD;
+    border: none;
+    margin: 25px 0;
+    color: var(--secondary);
+
+}
+.forma-envase input, select{
+    border: none;
+    border-radius: 5px;
+}
+legend{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+label{
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+.forma-envase label span{
+    color: red;
+}
+.forma-envase p{
+    font-weight: 300;
+}
+.entregar-btn button {
+    padding: 15px;
+    background-color: #5865F2;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .cuerpo-contenedor-boleto{
+        max-width: 85%;
+    }
+}
